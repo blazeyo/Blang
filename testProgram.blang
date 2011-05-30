@@ -1,0 +1,12 @@
+program
+  number := 5;
+  exp := 4;
+  result := 1;
+
+  while exp do
+    result := result * number;
+    exp := exp - 1;
+  end while;
+
+  return result;
+endprogram
