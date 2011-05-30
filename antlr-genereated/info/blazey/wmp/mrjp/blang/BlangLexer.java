@@ -1,4 +1,4 @@
-// $ANTLR 3.3 Nov 30, 2010 12:50:56 /home/blazej/development/eclipse/Blang/src/info/blazey/wmp/mrjp/blang/Blang.g 2011-05-08 00:56:06
+// $ANTLR 3.3 Nov 30, 2010 12:50:56 /home/blazej/development/eclipse/Blang/src/info/blazey/wmp/mrjp/blang/Blang.g 2011-05-30 15:13:34
 
   package info.blazey.wmp.mrjp.blang;
 
@@ -10,15 +10,6 @@ import java.util.ArrayList;
 
 public class BlangLexer extends Lexer {
     public static final int EOF=-1;
-    public static final int T__10=10;
-    public static final int T__11=11;
-    public static final int T__12=12;
-    public static final int T__13=13;
-    public static final int T__14=14;
-    public static final int T__15=15;
-    public static final int T__16=16;
-    public static final int T__17=17;
-    public static final int T__18=18;
     public static final int T__19=19;
     public static final int T__20=20;
     public static final int T__21=21;
@@ -30,11 +21,20 @@ public class BlangLexer extends Lexer {
     public static final int T__27=27;
     public static final int T__28=28;
     public static final int NEGATION=4;
-    public static final int IDENT=5;
-    public static final int INTEGER=6;
-    public static final int DIGIT=7;
-    public static final int LETTER=8;
-    public static final int WHITESPACE=9;
+    public static final int BLOCK=5;
+    public static final int IDENT=6;
+    public static final int ASSIGN=7;
+    public static final int IF=8;
+    public static final int WHILE=9;
+    public static final int INTEGER=10;
+    public static final int MULT=11;
+    public static final int DIV=12;
+    public static final int MOD=13;
+    public static final int PLUS=14;
+    public static final int MINUS=15;
+    public static final int DIGIT=16;
+    public static final int LETTER=17;
+    public static final int WHITESPACE=18;
 
     // delegates
     // delegators
@@ -49,203 +49,15 @@ public class BlangLexer extends Lexer {
     }
     public String getGrammarFileName() { return "/home/blazej/development/eclipse/Blang/src/info/blazey/wmp/mrjp/blang/Blang.g"; }
 
-    // $ANTLR start "T__10"
-    public final void mT__10() throws RecognitionException {
-        try {
-            int _type = T__10;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/blazej/development/eclipse/Blang/src/info/blazey/wmp/mrjp/blang/Blang.g:11:7: ( 'program' )
-            // /home/blazej/development/eclipse/Blang/src/info/blazey/wmp/mrjp/blang/Blang.g:11:9: 'program'
-            {
-            match("program"); 
-
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "T__10"
-
-    // $ANTLR start "T__11"
-    public final void mT__11() throws RecognitionException {
-        try {
-            int _type = T__11;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/blazej/development/eclipse/Blang/src/info/blazey/wmp/mrjp/blang/Blang.g:12:7: ( 'return' )
-            // /home/blazej/development/eclipse/Blang/src/info/blazey/wmp/mrjp/blang/Blang.g:12:9: 'return'
-            {
-            match("return"); 
-
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "T__11"
-
-    // $ANTLR start "T__12"
-    public final void mT__12() throws RecognitionException {
-        try {
-            int _type = T__12;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/blazej/development/eclipse/Blang/src/info/blazey/wmp/mrjp/blang/Blang.g:13:7: ( ';' )
-            // /home/blazej/development/eclipse/Blang/src/info/blazey/wmp/mrjp/blang/Blang.g:13:9: ';'
-            {
-            match(';'); 
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "T__12"
-
-    // $ANTLR start "T__13"
-    public final void mT__13() throws RecognitionException {
-        try {
-            int _type = T__13;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/blazej/development/eclipse/Blang/src/info/blazey/wmp/mrjp/blang/Blang.g:14:7: ( 'endprogram' )
-            // /home/blazej/development/eclipse/Blang/src/info/blazey/wmp/mrjp/blang/Blang.g:14:9: 'endprogram'
-            {
-            match("endprogram"); 
-
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "T__13"
-
-    // $ANTLR start "T__14"
-    public final void mT__14() throws RecognitionException {
-        try {
-            int _type = T__14;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/blazej/development/eclipse/Blang/src/info/blazey/wmp/mrjp/blang/Blang.g:15:7: ( ':=' )
-            // /home/blazej/development/eclipse/Blang/src/info/blazey/wmp/mrjp/blang/Blang.g:15:9: ':='
-            {
-            match(":="); 
-
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "T__14"
-
-    // $ANTLR start "T__15"
-    public final void mT__15() throws RecognitionException {
-        try {
-            int _type = T__15;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/blazej/development/eclipse/Blang/src/info/blazey/wmp/mrjp/blang/Blang.g:16:7: ( 'if' )
-            // /home/blazej/development/eclipse/Blang/src/info/blazey/wmp/mrjp/blang/Blang.g:16:9: 'if'
-            {
-            match("if"); 
-
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "T__15"
-
-    // $ANTLR start "T__16"
-    public final void mT__16() throws RecognitionException {
-        try {
-            int _type = T__16;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/blazej/development/eclipse/Blang/src/info/blazey/wmp/mrjp/blang/Blang.g:17:7: ( 'then' )
-            // /home/blazej/development/eclipse/Blang/src/info/blazey/wmp/mrjp/blang/Blang.g:17:9: 'then'
-            {
-            match("then"); 
-
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "T__16"
-
-    // $ANTLR start "T__17"
-    public final void mT__17() throws RecognitionException {
-        try {
-            int _type = T__17;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/blazej/development/eclipse/Blang/src/info/blazey/wmp/mrjp/blang/Blang.g:18:7: ( 'else' )
-            // /home/blazej/development/eclipse/Blang/src/info/blazey/wmp/mrjp/blang/Blang.g:18:9: 'else'
-            {
-            match("else"); 
-
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "T__17"
-
-    // $ANTLR start "T__18"
-    public final void mT__18() throws RecognitionException {
-        try {
-            int _type = T__18;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/blazej/development/eclipse/Blang/src/info/blazey/wmp/mrjp/blang/Blang.g:19:7: ( 'end' )
-            // /home/blazej/development/eclipse/Blang/src/info/blazey/wmp/mrjp/blang/Blang.g:19:9: 'end'
-            {
-            match("end"); 
-
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "T__18"
-
     // $ANTLR start "T__19"
     public final void mT__19() throws RecognitionException {
         try {
             int _type = T__19;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/blazej/development/eclipse/Blang/src/info/blazey/wmp/mrjp/blang/Blang.g:20:7: ( 'while' )
-            // /home/blazej/development/eclipse/Blang/src/info/blazey/wmp/mrjp/blang/Blang.g:20:9: 'while'
+            // /home/blazej/development/eclipse/Blang/src/info/blazey/wmp/mrjp/blang/Blang.g:11:7: ( 'program' )
+            // /home/blazej/development/eclipse/Blang/src/info/blazey/wmp/mrjp/blang/Blang.g:11:9: 'program'
             {
-            match("while"); 
+            match("program"); 
 
 
             }
@@ -263,10 +75,10 @@ public class BlangLexer extends Lexer {
         try {
             int _type = T__20;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/blazej/development/eclipse/Blang/src/info/blazey/wmp/mrjp/blang/Blang.g:21:7: ( 'do' )
-            // /home/blazej/development/eclipse/Blang/src/info/blazey/wmp/mrjp/blang/Blang.g:21:9: 'do'
+            // /home/blazej/development/eclipse/Blang/src/info/blazey/wmp/mrjp/blang/Blang.g:12:7: ( 'endprogram' )
+            // /home/blazej/development/eclipse/Blang/src/info/blazey/wmp/mrjp/blang/Blang.g:12:9: 'endprogram'
             {
-            match("do"); 
+            match("endprogram"); 
 
 
             }
@@ -284,10 +96,10 @@ public class BlangLexer extends Lexer {
         try {
             int _type = T__21;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/blazej/development/eclipse/Blang/src/info/blazey/wmp/mrjp/blang/Blang.g:22:7: ( 'endwhile' )
-            // /home/blazej/development/eclipse/Blang/src/info/blazey/wmp/mrjp/blang/Blang.g:22:9: 'endwhile'
+            // /home/blazej/development/eclipse/Blang/src/info/blazey/wmp/mrjp/blang/Blang.g:13:7: ( 'return' )
+            // /home/blazej/development/eclipse/Blang/src/info/blazey/wmp/mrjp/blang/Blang.g:13:9: 'return'
             {
-            match("endwhile"); 
+            match("return"); 
 
 
             }
@@ -305,10 +117,10 @@ public class BlangLexer extends Lexer {
         try {
             int _type = T__22;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/blazej/development/eclipse/Blang/src/info/blazey/wmp/mrjp/blang/Blang.g:23:7: ( '(' )
-            // /home/blazej/development/eclipse/Blang/src/info/blazey/wmp/mrjp/blang/Blang.g:23:9: '('
+            // /home/blazej/development/eclipse/Blang/src/info/blazey/wmp/mrjp/blang/Blang.g:14:7: ( ';' )
+            // /home/blazej/development/eclipse/Blang/src/info/blazey/wmp/mrjp/blang/Blang.g:14:9: ';'
             {
-            match('('); 
+            match(';'); 
 
             }
 
@@ -325,10 +137,11 @@ public class BlangLexer extends Lexer {
         try {
             int _type = T__23;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/blazej/development/eclipse/Blang/src/info/blazey/wmp/mrjp/blang/Blang.g:24:7: ( ')' )
-            // /home/blazej/development/eclipse/Blang/src/info/blazey/wmp/mrjp/blang/Blang.g:24:9: ')'
+            // /home/blazej/development/eclipse/Blang/src/info/blazey/wmp/mrjp/blang/Blang.g:15:7: ( 'then' )
+            // /home/blazej/development/eclipse/Blang/src/info/blazey/wmp/mrjp/blang/Blang.g:15:9: 'then'
             {
-            match(')'); 
+            match("then"); 
+
 
             }
 
@@ -345,10 +158,11 @@ public class BlangLexer extends Lexer {
         try {
             int _type = T__24;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/blazej/development/eclipse/Blang/src/info/blazey/wmp/mrjp/blang/Blang.g:25:7: ( '+' )
-            // /home/blazej/development/eclipse/Blang/src/info/blazey/wmp/mrjp/blang/Blang.g:25:9: '+'
+            // /home/blazej/development/eclipse/Blang/src/info/blazey/wmp/mrjp/blang/Blang.g:16:7: ( 'else' )
+            // /home/blazej/development/eclipse/Blang/src/info/blazey/wmp/mrjp/blang/Blang.g:16:9: 'else'
             {
-            match('+'); 
+            match("else"); 
+
 
             }
 
@@ -365,10 +179,11 @@ public class BlangLexer extends Lexer {
         try {
             int _type = T__25;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/blazej/development/eclipse/Blang/src/info/blazey/wmp/mrjp/blang/Blang.g:26:7: ( '*' )
-            // /home/blazej/development/eclipse/Blang/src/info/blazey/wmp/mrjp/blang/Blang.g:26:9: '*'
+            // /home/blazej/development/eclipse/Blang/src/info/blazey/wmp/mrjp/blang/Blang.g:17:7: ( 'end' )
+            // /home/blazej/development/eclipse/Blang/src/info/blazey/wmp/mrjp/blang/Blang.g:17:9: 'end'
             {
-            match('*'); 
+            match("end"); 
+
 
             }
 
@@ -385,10 +200,11 @@ public class BlangLexer extends Lexer {
         try {
             int _type = T__26;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/blazej/development/eclipse/Blang/src/info/blazey/wmp/mrjp/blang/Blang.g:27:7: ( '/' )
-            // /home/blazej/development/eclipse/Blang/src/info/blazey/wmp/mrjp/blang/Blang.g:27:9: '/'
+            // /home/blazej/development/eclipse/Blang/src/info/blazey/wmp/mrjp/blang/Blang.g:18:7: ( 'do' )
+            // /home/blazej/development/eclipse/Blang/src/info/blazey/wmp/mrjp/blang/Blang.g:18:9: 'do'
             {
-            match('/'); 
+            match("do"); 
+
 
             }
 
@@ -405,11 +221,10 @@ public class BlangLexer extends Lexer {
         try {
             int _type = T__27;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/blazej/development/eclipse/Blang/src/info/blazey/wmp/mrjp/blang/Blang.g:28:7: ( 'mod' )
-            // /home/blazej/development/eclipse/Blang/src/info/blazey/wmp/mrjp/blang/Blang.g:28:9: 'mod'
+            // /home/blazej/development/eclipse/Blang/src/info/blazey/wmp/mrjp/blang/Blang.g:19:7: ( '(' )
+            // /home/blazej/development/eclipse/Blang/src/info/blazey/wmp/mrjp/blang/Blang.g:19:9: '('
             {
-            match("mod"); 
-
+            match('('); 
 
             }
 
@@ -426,10 +241,10 @@ public class BlangLexer extends Lexer {
         try {
             int _type = T__28;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/blazej/development/eclipse/Blang/src/info/blazey/wmp/mrjp/blang/Blang.g:29:7: ( '-' )
-            // /home/blazej/development/eclipse/Blang/src/info/blazey/wmp/mrjp/blang/Blang.g:29:9: '-'
+            // /home/blazej/development/eclipse/Blang/src/info/blazey/wmp/mrjp/blang/Blang.g:20:7: ( ')' )
+            // /home/blazej/development/eclipse/Blang/src/info/blazey/wmp/mrjp/blang/Blang.g:20:9: ')'
             {
-            match('-'); 
+            match(')'); 
 
             }
 
@@ -444,11 +259,11 @@ public class BlangLexer extends Lexer {
     // $ANTLR start "DIGIT"
     public final void mDIGIT() throws RecognitionException {
         try {
-            // /home/blazej/development/eclipse/Blang/src/info/blazey/wmp/mrjp/blang/Blang.g:76:17: ( ( '0' .. '9' ) )
-            // /home/blazej/development/eclipse/Blang/src/info/blazey/wmp/mrjp/blang/Blang.g:76:19: ( '0' .. '9' )
+            // /home/blazej/development/eclipse/Blang/src/info/blazey/wmp/mrjp/blang/Blang.g:86:17: ( ( '0' .. '9' ) )
+            // /home/blazej/development/eclipse/Blang/src/info/blazey/wmp/mrjp/blang/Blang.g:86:19: ( '0' .. '9' )
             {
-            // /home/blazej/development/eclipse/Blang/src/info/blazey/wmp/mrjp/blang/Blang.g:76:19: ( '0' .. '9' )
-            // /home/blazej/development/eclipse/Blang/src/info/blazey/wmp/mrjp/blang/Blang.g:76:20: '0' .. '9'
+            // /home/blazej/development/eclipse/Blang/src/info/blazey/wmp/mrjp/blang/Blang.g:86:19: ( '0' .. '9' )
+            // /home/blazej/development/eclipse/Blang/src/info/blazey/wmp/mrjp/blang/Blang.g:86:20: '0' .. '9'
             {
             matchRange('0','9'); 
 
@@ -466,8 +281,8 @@ public class BlangLexer extends Lexer {
     // $ANTLR start "LETTER"
     public final void mLETTER() throws RecognitionException {
         try {
-            // /home/blazej/development/eclipse/Blang/src/info/blazey/wmp/mrjp/blang/Blang.g:77:17: ( ( 'a' .. 'z' | 'A' .. 'Z' ) )
-            // /home/blazej/development/eclipse/Blang/src/info/blazey/wmp/mrjp/blang/Blang.g:77:19: ( 'a' .. 'z' | 'A' .. 'Z' )
+            // /home/blazej/development/eclipse/Blang/src/info/blazey/wmp/mrjp/blang/Blang.g:87:17: ( ( 'a' .. 'z' | 'A' .. 'Z' ) )
+            // /home/blazej/development/eclipse/Blang/src/info/blazey/wmp/mrjp/blang/Blang.g:87:19: ( 'a' .. 'z' | 'A' .. 'Z' )
             {
             if ( (input.LA(1)>='A' && input.LA(1)<='Z')||(input.LA(1)>='a' && input.LA(1)<='z') ) {
                 input.consume();
@@ -487,15 +302,179 @@ public class BlangLexer extends Lexer {
     }
     // $ANTLR end "LETTER"
 
+    // $ANTLR start "PLUS"
+    public final void mPLUS() throws RecognitionException {
+        try {
+            int _type = PLUS;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // /home/blazej/development/eclipse/Blang/src/info/blazey/wmp/mrjp/blang/Blang.g:89:6: ( '+' )
+            // /home/blazej/development/eclipse/Blang/src/info/blazey/wmp/mrjp/blang/Blang.g:89:8: '+'
+            {
+            match('+'); 
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "PLUS"
+
+    // $ANTLR start "MINUS"
+    public final void mMINUS() throws RecognitionException {
+        try {
+            int _type = MINUS;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // /home/blazej/development/eclipse/Blang/src/info/blazey/wmp/mrjp/blang/Blang.g:90:7: ( '-' )
+            // /home/blazej/development/eclipse/Blang/src/info/blazey/wmp/mrjp/blang/Blang.g:90:9: '-'
+            {
+            match('-'); 
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "MINUS"
+
+    // $ANTLR start "MULT"
+    public final void mMULT() throws RecognitionException {
+        try {
+            int _type = MULT;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // /home/blazej/development/eclipse/Blang/src/info/blazey/wmp/mrjp/blang/Blang.g:91:6: ( '*' )
+            // /home/blazej/development/eclipse/Blang/src/info/blazey/wmp/mrjp/blang/Blang.g:91:8: '*'
+            {
+            match('*'); 
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "MULT"
+
+    // $ANTLR start "DIV"
+    public final void mDIV() throws RecognitionException {
+        try {
+            int _type = DIV;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // /home/blazej/development/eclipse/Blang/src/info/blazey/wmp/mrjp/blang/Blang.g:92:5: ( '\\\\' )
+            // /home/blazej/development/eclipse/Blang/src/info/blazey/wmp/mrjp/blang/Blang.g:92:7: '\\\\'
+            {
+            match('\\'); 
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "DIV"
+
+    // $ANTLR start "MOD"
+    public final void mMOD() throws RecognitionException {
+        try {
+            int _type = MOD;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // /home/blazej/development/eclipse/Blang/src/info/blazey/wmp/mrjp/blang/Blang.g:93:5: ( 'mod' )
+            // /home/blazej/development/eclipse/Blang/src/info/blazey/wmp/mrjp/blang/Blang.g:93:7: 'mod'
+            {
+            match("mod"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "MOD"
+
+    // $ANTLR start "ASSIGN"
+    public final void mASSIGN() throws RecognitionException {
+        try {
+            int _type = ASSIGN;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // /home/blazej/development/eclipse/Blang/src/info/blazey/wmp/mrjp/blang/Blang.g:95:8: ( ':=' )
+            // /home/blazej/development/eclipse/Blang/src/info/blazey/wmp/mrjp/blang/Blang.g:95:10: ':='
+            {
+            match(":="); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "ASSIGN"
+
+    // $ANTLR start "IF"
+    public final void mIF() throws RecognitionException {
+        try {
+            int _type = IF;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // /home/blazej/development/eclipse/Blang/src/info/blazey/wmp/mrjp/blang/Blang.g:96:4: ( 'if' )
+            // /home/blazej/development/eclipse/Blang/src/info/blazey/wmp/mrjp/blang/Blang.g:96:6: 'if'
+            {
+            match("if"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "IF"
+
+    // $ANTLR start "WHILE"
+    public final void mWHILE() throws RecognitionException {
+        try {
+            int _type = WHILE;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // /home/blazej/development/eclipse/Blang/src/info/blazey/wmp/mrjp/blang/Blang.g:97:7: ( 'while' )
+            // /home/blazej/development/eclipse/Blang/src/info/blazey/wmp/mrjp/blang/Blang.g:97:9: 'while'
+            {
+            match("while"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "WHILE"
+
     // $ANTLR start "INTEGER"
     public final void mINTEGER() throws RecognitionException {
         try {
             int _type = INTEGER;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/blazej/development/eclipse/Blang/src/info/blazey/wmp/mrjp/blang/Blang.g:79:9: ( ( DIGIT )+ )
-            // /home/blazej/development/eclipse/Blang/src/info/blazey/wmp/mrjp/blang/Blang.g:79:11: ( DIGIT )+
+            // /home/blazej/development/eclipse/Blang/src/info/blazey/wmp/mrjp/blang/Blang.g:99:9: ( ( DIGIT )+ )
+            // /home/blazej/development/eclipse/Blang/src/info/blazey/wmp/mrjp/blang/Blang.g:99:11: ( DIGIT )+
             {
-            // /home/blazej/development/eclipse/Blang/src/info/blazey/wmp/mrjp/blang/Blang.g:79:11: ( DIGIT )+
+            // /home/blazej/development/eclipse/Blang/src/info/blazey/wmp/mrjp/blang/Blang.g:99:11: ( DIGIT )+
             int cnt1=0;
             loop1:
             do {
@@ -509,7 +488,7 @@ public class BlangLexer extends Lexer {
 
                 switch (alt1) {
             	case 1 :
-            	    // /home/blazej/development/eclipse/Blang/src/info/blazey/wmp/mrjp/blang/Blang.g:79:11: DIGIT
+            	    // /home/blazej/development/eclipse/Blang/src/info/blazey/wmp/mrjp/blang/Blang.g:99:11: DIGIT
             	    {
             	    mDIGIT(); 
 
@@ -541,11 +520,11 @@ public class BlangLexer extends Lexer {
         try {
             int _type = IDENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/blazej/development/eclipse/Blang/src/info/blazey/wmp/mrjp/blang/Blang.g:80:7: ( LETTER ( LETTER | DIGIT )* )
-            // /home/blazej/development/eclipse/Blang/src/info/blazey/wmp/mrjp/blang/Blang.g:80:10: LETTER ( LETTER | DIGIT )*
+            // /home/blazej/development/eclipse/Blang/src/info/blazey/wmp/mrjp/blang/Blang.g:100:7: ( LETTER ( LETTER | DIGIT )* )
+            // /home/blazej/development/eclipse/Blang/src/info/blazey/wmp/mrjp/blang/Blang.g:100:10: LETTER ( LETTER | DIGIT )*
             {
             mLETTER(); 
-            // /home/blazej/development/eclipse/Blang/src/info/blazey/wmp/mrjp/blang/Blang.g:80:17: ( LETTER | DIGIT )*
+            // /home/blazej/development/eclipse/Blang/src/info/blazey/wmp/mrjp/blang/Blang.g:100:17: ( LETTER | DIGIT )*
             loop2:
             do {
                 int alt2=3;
@@ -561,14 +540,14 @@ public class BlangLexer extends Lexer {
 
                 switch (alt2) {
             	case 1 :
-            	    // /home/blazej/development/eclipse/Blang/src/info/blazey/wmp/mrjp/blang/Blang.g:80:18: LETTER
+            	    // /home/blazej/development/eclipse/Blang/src/info/blazey/wmp/mrjp/blang/Blang.g:100:18: LETTER
             	    {
             	    mLETTER(); 
 
             	    }
             	    break;
             	case 2 :
-            	    // /home/blazej/development/eclipse/Blang/src/info/blazey/wmp/mrjp/blang/Blang.g:80:27: DIGIT
+            	    // /home/blazej/development/eclipse/Blang/src/info/blazey/wmp/mrjp/blang/Blang.g:100:27: DIGIT
             	    {
             	    mDIGIT(); 
 
@@ -596,10 +575,10 @@ public class BlangLexer extends Lexer {
         try {
             int _type = WHITESPACE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/blazej/development/eclipse/Blang/src/info/blazey/wmp/mrjp/blang/Blang.g:82:13: ( ( ' ' | '\\t' | '\\r' | '\\n' | '\\f' )* )
-            // /home/blazej/development/eclipse/Blang/src/info/blazey/wmp/mrjp/blang/Blang.g:82:15: ( ' ' | '\\t' | '\\r' | '\\n' | '\\f' )*
+            // /home/blazej/development/eclipse/Blang/src/info/blazey/wmp/mrjp/blang/Blang.g:102:13: ( ( ' ' | '\\t' | '\\r' | '\\n' | '\\f' )* )
+            // /home/blazej/development/eclipse/Blang/src/info/blazey/wmp/mrjp/blang/Blang.g:102:15: ( ' ' | '\\t' | '\\r' | '\\n' | '\\f' )*
             {
-            // /home/blazej/development/eclipse/Blang/src/info/blazey/wmp/mrjp/blang/Blang.g:82:15: ( ' ' | '\\t' | '\\r' | '\\n' | '\\f' )*
+            // /home/blazej/development/eclipse/Blang/src/info/blazey/wmp/mrjp/blang/Blang.g:102:15: ( ' ' | '\\t' | '\\r' | '\\n' | '\\f' )*
             loop3:
             do {
                 int alt3=2;
@@ -645,159 +624,152 @@ public class BlangLexer extends Lexer {
     // $ANTLR end "WHITESPACE"
 
     public void mTokens() throws RecognitionException {
-        // /home/blazej/development/eclipse/Blang/src/info/blazey/wmp/mrjp/blang/Blang.g:1:8: ( T__10 | T__11 | T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | INTEGER | IDENT | WHITESPACE )
-        int alt4=22;
+        // /home/blazej/development/eclipse/Blang/src/info/blazey/wmp/mrjp/blang/Blang.g:1:8: ( T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | PLUS | MINUS | MULT | DIV | MOD | ASSIGN | IF | WHILE | INTEGER | IDENT | WHITESPACE )
+        int alt4=21;
         alt4 = dfa4.predict(input);
         switch (alt4) {
             case 1 :
-                // /home/blazej/development/eclipse/Blang/src/info/blazey/wmp/mrjp/blang/Blang.g:1:10: T__10
-                {
-                mT__10(); 
-
-                }
-                break;
-            case 2 :
-                // /home/blazej/development/eclipse/Blang/src/info/blazey/wmp/mrjp/blang/Blang.g:1:16: T__11
-                {
-                mT__11(); 
-
-                }
-                break;
-            case 3 :
-                // /home/blazej/development/eclipse/Blang/src/info/blazey/wmp/mrjp/blang/Blang.g:1:22: T__12
-                {
-                mT__12(); 
-
-                }
-                break;
-            case 4 :
-                // /home/blazej/development/eclipse/Blang/src/info/blazey/wmp/mrjp/blang/Blang.g:1:28: T__13
-                {
-                mT__13(); 
-
-                }
-                break;
-            case 5 :
-                // /home/blazej/development/eclipse/Blang/src/info/blazey/wmp/mrjp/blang/Blang.g:1:34: T__14
-                {
-                mT__14(); 
-
-                }
-                break;
-            case 6 :
-                // /home/blazej/development/eclipse/Blang/src/info/blazey/wmp/mrjp/blang/Blang.g:1:40: T__15
-                {
-                mT__15(); 
-
-                }
-                break;
-            case 7 :
-                // /home/blazej/development/eclipse/Blang/src/info/blazey/wmp/mrjp/blang/Blang.g:1:46: T__16
-                {
-                mT__16(); 
-
-                }
-                break;
-            case 8 :
-                // /home/blazej/development/eclipse/Blang/src/info/blazey/wmp/mrjp/blang/Blang.g:1:52: T__17
-                {
-                mT__17(); 
-
-                }
-                break;
-            case 9 :
-                // /home/blazej/development/eclipse/Blang/src/info/blazey/wmp/mrjp/blang/Blang.g:1:58: T__18
-                {
-                mT__18(); 
-
-                }
-                break;
-            case 10 :
-                // /home/blazej/development/eclipse/Blang/src/info/blazey/wmp/mrjp/blang/Blang.g:1:64: T__19
+                // /home/blazej/development/eclipse/Blang/src/info/blazey/wmp/mrjp/blang/Blang.g:1:10: T__19
                 {
                 mT__19(); 
 
                 }
                 break;
-            case 11 :
-                // /home/blazej/development/eclipse/Blang/src/info/blazey/wmp/mrjp/blang/Blang.g:1:70: T__20
+            case 2 :
+                // /home/blazej/development/eclipse/Blang/src/info/blazey/wmp/mrjp/blang/Blang.g:1:16: T__20
                 {
                 mT__20(); 
 
                 }
                 break;
-            case 12 :
-                // /home/blazej/development/eclipse/Blang/src/info/blazey/wmp/mrjp/blang/Blang.g:1:76: T__21
+            case 3 :
+                // /home/blazej/development/eclipse/Blang/src/info/blazey/wmp/mrjp/blang/Blang.g:1:22: T__21
                 {
                 mT__21(); 
 
                 }
                 break;
-            case 13 :
-                // /home/blazej/development/eclipse/Blang/src/info/blazey/wmp/mrjp/blang/Blang.g:1:82: T__22
+            case 4 :
+                // /home/blazej/development/eclipse/Blang/src/info/blazey/wmp/mrjp/blang/Blang.g:1:28: T__22
                 {
                 mT__22(); 
 
                 }
                 break;
-            case 14 :
-                // /home/blazej/development/eclipse/Blang/src/info/blazey/wmp/mrjp/blang/Blang.g:1:88: T__23
+            case 5 :
+                // /home/blazej/development/eclipse/Blang/src/info/blazey/wmp/mrjp/blang/Blang.g:1:34: T__23
                 {
                 mT__23(); 
 
                 }
                 break;
-            case 15 :
-                // /home/blazej/development/eclipse/Blang/src/info/blazey/wmp/mrjp/blang/Blang.g:1:94: T__24
+            case 6 :
+                // /home/blazej/development/eclipse/Blang/src/info/blazey/wmp/mrjp/blang/Blang.g:1:40: T__24
                 {
                 mT__24(); 
 
                 }
                 break;
-            case 16 :
-                // /home/blazej/development/eclipse/Blang/src/info/blazey/wmp/mrjp/blang/Blang.g:1:100: T__25
+            case 7 :
+                // /home/blazej/development/eclipse/Blang/src/info/blazey/wmp/mrjp/blang/Blang.g:1:46: T__25
                 {
                 mT__25(); 
 
                 }
                 break;
-            case 17 :
-                // /home/blazej/development/eclipse/Blang/src/info/blazey/wmp/mrjp/blang/Blang.g:1:106: T__26
+            case 8 :
+                // /home/blazej/development/eclipse/Blang/src/info/blazey/wmp/mrjp/blang/Blang.g:1:52: T__26
                 {
                 mT__26(); 
 
                 }
                 break;
-            case 18 :
-                // /home/blazej/development/eclipse/Blang/src/info/blazey/wmp/mrjp/blang/Blang.g:1:112: T__27
+            case 9 :
+                // /home/blazej/development/eclipse/Blang/src/info/blazey/wmp/mrjp/blang/Blang.g:1:58: T__27
                 {
                 mT__27(); 
 
                 }
                 break;
-            case 19 :
-                // /home/blazej/development/eclipse/Blang/src/info/blazey/wmp/mrjp/blang/Blang.g:1:118: T__28
+            case 10 :
+                // /home/blazej/development/eclipse/Blang/src/info/blazey/wmp/mrjp/blang/Blang.g:1:64: T__28
                 {
                 mT__28(); 
 
                 }
                 break;
-            case 20 :
-                // /home/blazej/development/eclipse/Blang/src/info/blazey/wmp/mrjp/blang/Blang.g:1:124: INTEGER
+            case 11 :
+                // /home/blazej/development/eclipse/Blang/src/info/blazey/wmp/mrjp/blang/Blang.g:1:70: PLUS
+                {
+                mPLUS(); 
+
+                }
+                break;
+            case 12 :
+                // /home/blazej/development/eclipse/Blang/src/info/blazey/wmp/mrjp/blang/Blang.g:1:75: MINUS
+                {
+                mMINUS(); 
+
+                }
+                break;
+            case 13 :
+                // /home/blazej/development/eclipse/Blang/src/info/blazey/wmp/mrjp/blang/Blang.g:1:81: MULT
+                {
+                mMULT(); 
+
+                }
+                break;
+            case 14 :
+                // /home/blazej/development/eclipse/Blang/src/info/blazey/wmp/mrjp/blang/Blang.g:1:86: DIV
+                {
+                mDIV(); 
+
+                }
+                break;
+            case 15 :
+                // /home/blazej/development/eclipse/Blang/src/info/blazey/wmp/mrjp/blang/Blang.g:1:90: MOD
+                {
+                mMOD(); 
+
+                }
+                break;
+            case 16 :
+                // /home/blazej/development/eclipse/Blang/src/info/blazey/wmp/mrjp/blang/Blang.g:1:94: ASSIGN
+                {
+                mASSIGN(); 
+
+                }
+                break;
+            case 17 :
+                // /home/blazej/development/eclipse/Blang/src/info/blazey/wmp/mrjp/blang/Blang.g:1:101: IF
+                {
+                mIF(); 
+
+                }
+                break;
+            case 18 :
+                // /home/blazej/development/eclipse/Blang/src/info/blazey/wmp/mrjp/blang/Blang.g:1:104: WHILE
+                {
+                mWHILE(); 
+
+                }
+                break;
+            case 19 :
+                // /home/blazej/development/eclipse/Blang/src/info/blazey/wmp/mrjp/blang/Blang.g:1:110: INTEGER
                 {
                 mINTEGER(); 
 
                 }
                 break;
-            case 21 :
-                // /home/blazej/development/eclipse/Blang/src/info/blazey/wmp/mrjp/blang/Blang.g:1:132: IDENT
+            case 20 :
+                // /home/blazej/development/eclipse/Blang/src/info/blazey/wmp/mrjp/blang/Blang.g:1:118: IDENT
                 {
                 mIDENT(); 
 
                 }
                 break;
-            case 22 :
-                // /home/blazej/development/eclipse/Blang/src/info/blazey/wmp/mrjp/blang/Blang.g:1:138: WHITESPACE
+            case 21 :
+                // /home/blazej/development/eclipse/Blang/src/info/blazey/wmp/mrjp/blang/Blang.g:1:124: WHITESPACE
                 {
                 mWHITESPACE(); 
 
@@ -811,53 +783,53 @@ public class BlangLexer extends Lexer {
 
     protected DFA4 dfa4 = new DFA4(this);
     static final String DFA4_eotS =
-        "\1\23\2\22\1\uffff\1\22\1\uffff\4\22\5\uffff\1\22\4\uffff\4\22\1"+
-        "\41\2\22\1\44\3\22\1\52\1\22\1\uffff\2\22\1\uffff\1\56\4\22\1\uffff"+
-        "\1\63\1\64\1\22\1\uffff\4\22\2\uffff\1\72\1\22\1\74\2\22\1\uffff"+
-        "\1\77\1\uffff\2\22\1\uffff\1\22\1\103\1\22\1\uffff\1\105\1\uffff";
+        "\1\23\3\22\1\uffff\2\22\6\uffff\1\22\1\uffff\2\22\3\uffff\5\22\1"+
+        "\42\1\22\1\44\2\22\1\50\3\22\1\uffff\1\54\1\uffff\3\22\1\uffff\1"+
+        "\60\1\22\1\62\1\uffff\3\22\1\uffff\1\22\1\uffff\1\67\2\22\1\72\1"+
+        "\uffff\1\73\1\22\2\uffff\2\22\1\77\1\uffff";
     static final String DFA4_eofS =
-        "\106\uffff";
+        "\100\uffff";
     static final String DFA4_minS =
-        "\1\50\1\162\1\145\1\uffff\1\154\1\uffff\1\146\2\150\1\157\5\uffff"+
-        "\1\157\4\uffff\1\157\1\164\1\144\1\163\1\60\1\145\1\151\1\60\1\144"+
-        "\1\147\1\165\1\60\1\145\1\uffff\1\156\1\154\1\uffff\1\60\3\162\1"+
-        "\150\1\uffff\2\60\1\145\1\uffff\1\141\1\156\1\157\1\151\2\uffff"+
-        "\1\60\1\155\1\60\1\147\1\154\1\uffff\1\60\1\uffff\1\162\1\145\1"+
-        "\uffff\1\141\1\60\1\155\1\uffff\1\60\1\uffff";
+        "\1\50\1\162\1\154\1\145\1\uffff\1\150\1\157\6\uffff\1\157\1\uffff"+
+        "\1\146\1\150\3\uffff\1\157\1\144\1\163\1\164\1\145\1\60\1\144\1"+
+        "\60\1\151\1\147\1\60\1\145\1\165\1\156\1\uffff\1\60\1\uffff\1\154"+
+        "\2\162\1\uffff\1\60\1\162\1\60\1\uffff\1\145\1\141\1\157\1\uffff"+
+        "\1\156\1\uffff\1\60\1\155\1\147\1\60\1\uffff\1\60\1\162\2\uffff"+
+        "\1\141\1\155\1\60\1\uffff";
     static final String DFA4_maxS =
-        "\1\172\1\162\1\145\1\uffff\1\156\1\uffff\1\146\2\150\1\157\5\uffff"+
-        "\1\157\4\uffff\1\157\1\164\1\144\1\163\1\172\1\145\1\151\1\172\1"+
-        "\144\1\147\1\165\1\172\1\145\1\uffff\1\156\1\154\1\uffff\1\172\3"+
-        "\162\1\150\1\uffff\2\172\1\145\1\uffff\1\141\1\156\1\157\1\151\2"+
-        "\uffff\1\172\1\155\1\172\1\147\1\154\1\uffff\1\172\1\uffff\1\162"+
-        "\1\145\1\uffff\1\141\1\172\1\155\1\uffff\1\172\1\uffff";
+        "\1\172\1\162\1\156\1\145\1\uffff\1\150\1\157\6\uffff\1\157\1\uffff"+
+        "\1\146\1\150\3\uffff\1\157\1\144\1\163\1\164\1\145\1\172\1\144\1"+
+        "\172\1\151\1\147\1\172\1\145\1\165\1\156\1\uffff\1\172\1\uffff\1"+
+        "\154\2\162\1\uffff\1\172\1\162\1\172\1\uffff\1\145\1\141\1\157\1"+
+        "\uffff\1\156\1\uffff\1\172\1\155\1\147\1\172\1\uffff\1\172\1\162"+
+        "\2\uffff\1\141\1\155\1\172\1\uffff";
     static final String DFA4_acceptS =
-        "\3\uffff\1\3\1\uffff\1\5\4\uffff\1\15\1\16\1\17\1\20\1\21\1\uffff"+
-        "\1\23\1\24\1\25\1\26\15\uffff\1\6\2\uffff\1\13\5\uffff\1\11\3\uffff"+
-        "\1\22\4\uffff\1\10\1\7\5\uffff\1\12\1\uffff\1\2\2\uffff\1\1\3\uffff"+
-        "\1\14\1\uffff\1\4";
+        "\4\uffff\1\4\2\uffff\1\11\1\12\1\13\1\14\1\15\1\16\1\uffff\1\20"+
+        "\2\uffff\1\23\1\24\1\25\16\uffff\1\10\1\uffff\1\21\3\uffff\1\7\3"+
+        "\uffff\1\17\3\uffff\1\6\1\uffff\1\5\4\uffff\1\22\2\uffff\1\3\1\1"+
+        "\3\uffff\1\2";
     static final String DFA4_specialS =
-        "\106\uffff}>";
+        "\100\uffff}>";
     static final String[] DFA4_transitionS = {
-            "\1\12\1\13\1\15\1\14\1\uffff\1\20\1\uffff\1\16\12\21\1\5\1\3"+
-            "\5\uffff\32\22\6\uffff\3\22\1\11\1\4\3\22\1\6\3\22\1\17\2\22"+
-            "\1\1\1\22\1\2\1\22\1\7\2\22\1\10\3\22",
+            "\1\7\1\10\1\13\1\11\1\uffff\1\12\2\uffff\12\21\1\16\1\4\5\uffff"+
+            "\32\22\1\uffff\1\14\4\uffff\3\22\1\6\1\2\3\22\1\17\3\22\1\15"+
+            "\2\22\1\1\1\22\1\3\1\22\1\5\2\22\1\20\3\22",
             "\1\24",
-            "\1\25",
-            "",
-            "\1\27\1\uffff\1\26",
+            "\1\26\1\uffff\1\25",
+            "\1\27",
             "",
             "\1\30",
             "\1\31",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
             "\1\32",
+            "",
             "\1\33",
-            "",
-            "",
-            "",
-            "",
-            "",
             "\1\34",
-            "",
             "",
             "",
             "",
@@ -865,50 +837,44 @@ public class BlangLexer extends Lexer {
             "\1\36",
             "\1\37",
             "\1\40",
+            "\1\41",
             "\12\22\7\uffff\32\22\6\uffff\32\22",
-            "\1\42",
             "\1\43",
             "\12\22\7\uffff\32\22\6\uffff\32\22",
             "\1\45",
             "\1\46",
-            "\1\47",
-            "\12\22\7\uffff\32\22\6\uffff\17\22\1\50\6\22\1\51\3\22",
+            "\12\22\7\uffff\32\22\6\uffff\17\22\1\47\12\22",
+            "\1\51",
+            "\1\52",
             "\1\53",
             "",
-            "\1\54",
+            "\12\22\7\uffff\32\22\6\uffff\32\22",
+            "",
             "\1\55",
-            "",
-            "\12\22\7\uffff\32\22\6\uffff\32\22",
+            "\1\56",
             "\1\57",
-            "\1\60",
-            "\1\61",
-            "\1\62",
             "",
             "\12\22\7\uffff\32\22\6\uffff\32\22",
+            "\1\61",
             "\12\22\7\uffff\32\22\6\uffff\32\22",
+            "",
+            "\1\63",
+            "\1\64",
             "\1\65",
             "",
             "\1\66",
-            "\1\67",
+            "",
+            "\12\22\7\uffff\32\22\6\uffff\32\22",
             "\1\70",
             "\1\71",
-            "",
+            "\12\22\7\uffff\32\22\6\uffff\32\22",
             "",
             "\12\22\7\uffff\32\22\6\uffff\32\22",
-            "\1\73",
-            "\12\22\7\uffff\32\22\6\uffff\32\22",
+            "\1\74",
+            "",
+            "",
             "\1\75",
             "\1\76",
-            "",
-            "\12\22\7\uffff\32\22\6\uffff\32\22",
-            "",
-            "\1\100",
-            "\1\101",
-            "",
-            "\1\102",
-            "\12\22\7\uffff\32\22\6\uffff\32\22",
-            "\1\104",
-            "",
             "\12\22\7\uffff\32\22\6\uffff\32\22",
             ""
     };
@@ -943,7 +909,7 @@ public class BlangLexer extends Lexer {
             this.transition = DFA4_transition;
         }
         public String getDescription() {
-            return "1:1: Tokens : ( T__10 | T__11 | T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | INTEGER | IDENT | WHITESPACE );";
+            return "1:1: Tokens : ( T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | PLUS | MINUS | MULT | DIV | MOD | ASSIGN | IF | WHILE | INTEGER | IDENT | WHITESPACE );";
         }
     }
  

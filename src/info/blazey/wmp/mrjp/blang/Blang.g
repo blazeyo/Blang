@@ -4,10 +4,12 @@ options {
   language = Java;
   output = AST;
   ASTLabelType = CommonTree;
+  backtrack = true;
 }
 
 tokens {
   NEGATION;
+  BLOCK;
 }
 
 @header {
@@ -21,8 +23,12 @@ tokens {
 program
   : 'program'!
       statement*
-      'return'! expression ';'!
+      returnStatement
     'endprogram'!
+  ;
+  
+returnStatement
+  : 'return'^ expression ';'!
   ;
   
 statement
@@ -32,21 +38,25 @@ statement
   ;
   
 assignStatement
-  : IDENT ':='^ expression ';'!
+  : IDENT ASSIGN^ expression ';'!
   ;
   
 ifStatement
-  : 'if' expression 'then'
-      statement*
-    ('else'
-      statement*)?
-    'end' 'if'
+  : IF^ expression 'then'!
+      block
+    ('else'!
+      block)?
+    'end'! 'if'! ';'!
   ;
-    
+  
 whileStatement
-  : 'while' expression 'do'
-      statement*
-    'endwhile'
+  : WHILE^ expression 'do'!
+      block
+    'end'! 'while'! ';'!
+  ;
+  
+block
+  : statement* -> ^(BLOCK statement*)
   ;
   
 // expressions
@@ -62,11 +72,11 @@ unary
   ;
 
 mult
-  : unary (('*'^ | '/'^ | 'mod'^) unary)*
+  : unary ((MULT^ | DIV^ | MOD^) unary)*
   ;
   
 expression
-  : mult (('+'^ | '-'^) mult)*
+  : mult ((PLUS^ | MINUS^) mult)*
   ;
   
 negation
@@ -75,6 +85,16 @@ negation
 
 fragment DIGIT  : ('0'..'9');
 fragment LETTER : ('a'..'z' | 'A'..'Z');
+
+PLUS : '+';
+MINUS : '-';
+MULT : '*';
+DIV : '\\';
+MOD : 'mod';
+
+ASSIGN : ':=';
+IF : 'if';
+WHILE : 'while';
 
 INTEGER : DIGIT+;
 IDENT :  LETTER (LETTER | DIGIT)*;

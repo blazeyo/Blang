@@ -1,16 +1,19 @@
 package info.blazey.wmp.mrjp.blang;
 
-import org.antlr.runtime.ANTLRStringStream;
-import org.antlr.runtime.CharStream;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+
 import org.antlr.runtime.RecognitionException;
 
 public class BlangInterpreter {
 
-	public static void main(String[] args) throws RecognitionException {
-//		CharStream stream = new ANTLRStringStream("program var x; body return 2 + 3; endbody endprogram");
-		CharStream stream = new ANTLRStringStream("program x:= 2; return x + x * -x + 1; endprogram");
-		
-		int result = BlangProgramEvaluator.evaluate(stream);
+	public static void main(String[] args) throws RecognitionException, FileNotFoundException {
+		File input = new File(args[0]);
+		Scanner scanner = new Scanner(input).useDelimiter("\\Z");
+		String program = scanner.next();
+
+		int result = BlangProgramEvaluator.execute(program);
 		
 		System.out.println("The result is: " + result);
 	}
