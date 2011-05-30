@@ -1,0 +1,46 @@
+Blang programming language
+==========================
+
+Data types:
+===========
+The only data type available in blang is integer
+
+Variables:
+==========
+Variables don't need to be defined.
+
+Booleans:
+=========
+Expression is condiered to be true if it's value is not equal to 0.
+
+Structure:
+==========
+program
+  {statements}
+  return {expression};
+endprogram
+
+Statements:
+===========
+assignment: 
+  {id} := {expression};
+
+if statement:
+  if {expression} then
+    {statements}
+  else
+    {statements}
+  end if;
+
+while statement
+  while {expression} do
+    {statements}
+  end while;
+
+Operators:
+==========
+Available operators: +, -, *, \, mod.
+
+Example:
+========
+See testProgram.blang

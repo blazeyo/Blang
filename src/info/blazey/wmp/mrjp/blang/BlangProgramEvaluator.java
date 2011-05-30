@@ -13,6 +13,7 @@ import org.antlr.runtime.tree.CommonTree;
 
 /**
  * Blang programming language interpreter.
+ * Github repository: https://github.com/blazeyo/Blang
  * 
  * @author Błażej Owczarczyk
  */
