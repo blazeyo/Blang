@@ -1,11 +1,11 @@
 program
-  number := 5;
-  exp := 4;
+  base := 2;
+  exponent := 12;
   result := 1;
 
-  while exp do
-    result := result * number;
-    exp := exp - 1;
+  while exponent do
+    result := result * base;
+    exponent := exponent - 1;
   end while;
 
   return result;

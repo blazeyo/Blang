@@ -44,3 +44,13 @@ Available operators: +, -, *, \, mod.
 Example:
 ========
 See testProgram.blang
+
+Cele:
+zdefiniować język, zrobić kompilator i interpreter.
+
+Jak zbudowano kompilator, co jest wynikiem.
+Jak działa interpreter
+
+Napisać podręcznik użytkownika.
+napisać program w edytorze.
+Jak uruchomić interpretator

@@ -37,6 +37,8 @@ public class BlangProgramEvaluator {
 		program_return programEvaluation = parser.program();
 		CommonTree tree = (CommonTree) programEvaluation.getTree();
 		
+		System.out.println(tree.toStringTree());
+		
 		variables = new HashMap<String, Integer>();
 		
 		return executeProgram(tree);

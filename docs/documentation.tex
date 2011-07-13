@@ -1,0 +1,160 @@
+\documentclass[a4paper,10pt]{article}
+%\documentclass[a4paper,10pt]{scrartcl}
+
+\usepackage[MeX]{polski}
+\usepackage[utf8]{inputenc}
+
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks,
+    citecolor=black,
+    filecolor=black,
+    linkcolor=black,
+    urlcolor=black
+}
+
+\title{Metody Realizacji Języków Programowania 2011 \newline Projekt semestralny - Sprawozdanie}
+\author{Błażej Owczarczyk}
+\date{\today}
+
+\setcounter{tocdepth}{3}
+
+\pdfinfo{%
+  /Title    (Sprawozdanie)
+  /Author   (Błażej Owczarczyk)
+  /Creator  ()
+  /Producer ()
+  /Subject  ()
+  /Keywords ()
+}
+
+\begin{document}
+\maketitle
+ \begin{center} 
+  Pod kierunkiem prof. Andrzeja Salwickiego
+ \end{center}
+\newpage
+
+\tableofcontents
+\newpage
+
+\section{Co było celem?}
+Celem projektu było:
+\begin{enumerate}
+ \item Zdefiniowanie języka programowania zawierającego:
+ \begin{enumerate}
+  \item zmienne
+  \item instrukcje warunkowe
+  \item pętle.
+ \end{enumerate}
+ \item Napisanie gramatyki.
+ \item Stworzenie generatora kodu pośredniego używając dostępnych narzędzi.
+ \item Stworzenie maszyny wirtualnej interpretującej kod pośredni.
+\end{enumerate}
+
+\newpage
+
+\section{Język Blang}
+
+\subsection{Opis}
+Stworzono język Blang, w którym:
+\begin{enumerate}
+ \item Zmienne nie muszą być deklarowane.
+ \item Domyślny i jedyny typ zmiennych to liczby całkowite (integer).
+ \item Wyrażenia są uznawane za prawdziwe, jeśli ich wartość jest różna od zera.
+ \item Dostępne operatory to:
+ \begin{enumerate}
+  \item '+' - dodawanie
+  \item '-' - odejmowanie
+  \item '*' - mnożenie
+  \item '\textbackslash' - dzielenie
+  \item 'mod' - dzielenie modulo
+ \end{enumerate}
+\end{enumerate}
+
+\subsection{Składnia}
+Składnia języka Blang:
+\begin{enumerate}
+ \item Program
+  \begin{verbatim}
+   program
+     {instrukcje}
+     return {wyrażenie};
+   endprogram
+  \end{verbatim}
+ \item Instrukcje
+ \begin{enumerate}
+  \item instrukcja przypisania
+   \begin{verbatim}
+    {identyfikator} := {wyrażenie};
+   \end{verbatim}
+  \item instrukcja warunkowa
+   \begin{verbatim}
+    if {wyrażenie} then
+      {instrukcje}
+    else
+      {instrukcje}
+    end if;
+   \end{verbatim}
+  \item instrukcja pętli
+   \begin{verbatim}
+    while {wyrażenie} do
+      {instrukcje}
+    end while;
+   \end{verbatim}
+ \end{enumerate}
+\end{enumerate}
+
+\newpage
+
+\section{Przykłady}
+
+\subsection{przykładowy program}
+ \begin{verbatim}
+  program
+    n := 51;
+
+    while n - 1 do
+      if n mod 2 then
+        n := n * 3 + 1;
+      else
+        n := n \ 2;
+      end if;
+    end while;
+
+    return n;
+  endprogram
+ \end{verbatim}
+
+\subsection{program obliczający potęgi}
+ \begin{verbatim}
+  program
+    base := 2;
+    exponent := 12;
+    result := 1;
+
+    while exponent do
+      result := result * base;
+      exponent := exponent - 1;
+    end while;
+
+    return result;
+  endprogram
+ \end{verbatim}
+
+\newpage
+
+\section{Podręcznik użytkownika}
+Aby uruchomić program w języku Blang należy:
+\begin{enumerate}
+ \item Napisać program w edytorze tekstu (np. notepad w systemie windows lub vi w linuxie)
+ \item Zapisać program w pliku tekstowym (jako plain text) z rozszerzeniem .blang
+ \item Uruchomić konsolę i wpisać
+  \begin{verbatim}
+   java -jar {path/to/blang}/Blang.jar {nazwa-pliku}.blang
+  \end{verbatim}
+  gdzie $\{$path/to/blang$\}$ to ścieżka do katalogu, w którym znajduje się plik Blang.jar, a $\{$nazwa-pliku$\}$ to nazwa stworzonego pliku z programem.
+ \item Na ekranie pojawi się wiadomość powitalna, treść programu oraz wartość wyrażenia podanego po słowie kluczowym return.
+\end{enumerate}
+
+\end{document}
