@@ -11,7 +11,7 @@ Variables don't need to be defined.
 
 Booleans:
 =========
-Expression is condiered to be true if it's value is not equal to 0.
+Expression is considered to be true if it's value is not equal to 0.
 
 Structure:
 ==========
